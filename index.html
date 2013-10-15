@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>windows.js</title>
+        <link rel="stylesheet" href="css/windows.css" />
+    </head>
+    <body>
+        <script src="js/libs/require.js"></script>
+        <script src="js/windows.js"></script>
+        <script>
+            require.config({ baseUrl: 'js' });
+            require(
+                ['windowsJs'],
+                function (windowsJs) {
+                    var desktopIcons = {
+                        icons: [
+                            {
+                                data: {
+                                    title: 'Add window',
+                                    iconUrl: 'img/computer.png',
+                                    fontColor: '#eee'
+                                },
+                                action: function () {
+                                    alert(1);
+                                }
+                            }
+                        ]
+                    };
+                    windowsJs('body', desktopIcons);
+                }
+            );
+        </script>
+    </body>
+</html>
