@@ -1,13 +1,13 @@
 <html>
     <head>
         <title>windows.js</title>
-        <link rel="stylesheet" href="css/windows.css" />
+        <link rel="stylesheet" href="windows.js/css/windows.css" />
     </head>
     <body>
-        <script src="js/libs/require.js"></script>
-        <script src="js/windows.js"></script>
+        <script src="windows.js/libs/require.js"></script>
+        <script src="windows.js/windows.js"></script>
         <script>
-            require.config({ baseUrl: 'js' });
+            require.config({ baseUrl: 'windows.js' });
             require(
                 ['windowsJs'],
                 function (windowsJs) {
@@ -19,8 +19,10 @@
                                     iconUrl: 'img/computer.png',
                                     fontColor: '#eee'
                                 },
-                                action: function () {
-                                    alert(1);
+                                action: {
+                                    event: 'openWindow',
+                                    type: 'text',
+                                    content: 'some text'
                                 }
                             }
                         ]
