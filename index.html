@@ -21,8 +21,13 @@
                                 },
                                 action: {
                                     event: 'openWindow',
-                                    type: 'text',
-                                    content: 'some text'
+                                    data: {
+                                        title: 'Some window',
+                                        icon: 'img/computer.png',
+                                        options: ['close'],
+                                        type: 'text',
+                                        content: 'some text'
+                                    }
                                 }
                             }
                         ]
